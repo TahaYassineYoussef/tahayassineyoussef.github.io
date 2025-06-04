@@ -1,0 +1,220 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Grechen+Fuemen&family=Montserrat+Alternates:wght@400;500;600&display=swap");
+
+:root {
+  --hue: 358;
+  --first-color: hsl(var(--hue), 80%, 49%);
+  --first-color-alt: hsl(var(--hue), 76%, 45%);
+  --white-color: #fff;
+  --black-color: #000;
+  --text-color: hsl(var(--hue), 2%, 66%);
+  --body-color: hsl(var(--hue), 100%, 1%);
+  --container-color: hsl(var(--hue), 2%, 10%);
+
+  --body-font: "Montserrat Alternates", sans-serif;
+  --second-font: "Grechen Fuemen", cursive;
+
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  --z-fixed: 100;
+}
+
+body {
+  margin: 0;
+  font-family: var(--body-font);
+  background-color: var(--body-color);
+  color: var(--white-color);
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1168px;
+  margin: auto;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.section {
+  padding: 4rem 0;
+}
+
+.section__title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  background-color: var(--first-color);
+  padding: 0.75rem 1.5rem;
+  color: #fff;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.btn--alt {
+  background-color: transparent;
+  border: 1px solid var(--first-color);
+  color: var(--first-color);
+}
+
+.btn--small {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+.sidebar {
+  position: fixed;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  z-index: var(--z-fixed);
+}
+
+.nav__icon {
+  color: var(--white-color);
+  font-size: 1.5rem;
+}
+
+.home__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.home__info {
+  flex: 1;
+}
+
+.home__title {
+  font-size: 2.5rem;
+}
+
+.home__description {
+  margin: 1rem 0;
+}
+
+.home__perfil img {
+  width: 250px;
+  border-radius: 1rem;
+}
+
+/* Center the entire skills section */
+.skills.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+}
+
+/* Grid for icons */
+.skills__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  justify-items: center;
+  gap: 1.5rem;
+  max-width: 600px;
+  width: 100%;
+}
+
+/* Each skill item box */
+.skills__item {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--container-color);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+/* The icon itself */
+.skills__img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+
+.projects__container {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.project__card {
+  background-color: var(--container-color);
+  border-radius: 1rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.project__card img {
+  border-radius: 1rem;
+  width: 100%;
+}
+
+.services__container {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.service__card {
+  background-color: var(--container-color);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.service__card i {
+  font-size: 2rem;
+  color: var(--first-color);
+  margin-bottom: 0.5rem;
+}
+
+.contact__form input,
+.contact__form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border-radius: 0.75rem;
+  background-color: var(--container-color);
+  color: var(--white-color);
+}
+
+.footer {
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 0.875rem;
+  color: var(--text-color);
+}
+
+@media (min-width: 768px) {
+  .home__container {
+    flex-wrap: nowrap;
+  }
+}
+
+@media (min-width: 1024px) {
+  .home__title {
+    font-size: 3.5rem;
+  }
+
+  .section__title {
+    font-size: 2.5rem;
+  }
+}
